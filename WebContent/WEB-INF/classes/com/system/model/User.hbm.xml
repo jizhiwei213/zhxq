@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.system.model.UserModel" table="TB_USER">
+        <id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="userName" type="java.lang.String">
+            <column name="USER_NAME" length="20" />
+        </property>
+        <property name="userAccount" type="java.lang.String">
+            <column name="USER_ACCOUNT" length="50" />
+        </property>
+        <property name="userPassword" type="java.lang.String">
+            <column name="USER_PASSWORD" length="100" />
+        </property>
+        <property name="linkTel" type="java.lang.String">
+            <column name="LINK_TEL" length="20" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" length="50" />
+        </property>
+        <property name="isStop">
+            <column name="ISSTOP" />
+        </property>
+        <property name="sex">
+            <column name="SEX" />
+        </property>
+        <many-to-one name="dept" column="DEPT_ID" class="com.system.model.DepartmentModel" not-found="ignore"></many-to-one>
+        <set name="roles" table="TB_USERROLE_REL" lazy="false">
+        	<key column="USER_ID"></key>
+        	<many-to-many column="ROLE_ID" class="com.system.model.RoleModel"></many-to-many>
+        </set>
+        <property name="userPhoto" type="java.lang.String">
+            <column name="USER_PHOTO" length="100" />
+        </property>
+		<property name="insertTime" />
+        <property name="updateTime" />
+        <property name="usertype" type="java.lang.String">
+            <column name="user_type" length="50" />
+        </property>
+        <many-to-one name="wygs" column="wygs_id" class="com.lonewolf.jcxx.model.ZhxqWygsModel" not-found="ignore"></many-to-one>
+        <many-to-one name="xiaoqu" column="xiaoqu_id" class="com.lonewolf.jcxx.model.XiaoquModel" not-found="ignore"></many-to-one>
+   		<many-to-one name="quyu" column="quyu_id" class="com.lonewolf.jcxx.model.ZhxqQuModel" not-found="ignore"></many-to-one>
+    </class>
+</hibernate-mapping>

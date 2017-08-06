@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<import resource="applicationContext-resource.xml" />
+	
+	<bean id="functionDAO" class="com.system.dao.FunctionDAO" singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="operationDAO" class="com.system.dao.OperationDAO" singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="userDAO" class="com.system.dao.UserDAO" singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="roleDAO" class="com.system.dao.RoleDAO" singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="deptDAO" class="com.system.dao.DeptDAO" singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="dataDictionaryDAO" class="com.system.dao.DataDictionaryDAO" singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="messageDAO" class="com.system.remind.dao.MessageDAO" singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 基础信息 -->
+	<bean id="zhxqShenDAO" class="com.lonewolf.jcxx.dao.ZhxqShenDAO" singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="zhxqShiDAO" class="com.lonewolf.jcxx.dao.ZhxqShiDAO" singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="zhxqQuDAO" class="com.lonewolf.jcxx.dao.ZhxqQuDAO" singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="gsqUserDAO" class="com.lonewolf.jcxx.dao.GsqUserDAO" singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="zhxqWygsDAO" class="com.lonewolf.jcxx.dao.ZhxqWygsDAO" singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 小区管理 -->
+	<bean id="xiaoquDAO" class="com.lonewolf.jcxx.dao.XiaoquDAO" singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="zhxqRoomDAO" class="com.lonewolf.jcxx.dao.ZhxqRoomDAO" singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="zhxqWyfbzDAO" class="com.lonewolf.jcxx.dao.ZhxqWyfbzDAO" singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="zhxqJiaofeiDAO" class="com.lonewolf.jiaofei.dao.ZhxqJiaofeiDAO" singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+</beans> 

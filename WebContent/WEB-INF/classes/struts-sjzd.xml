@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="sjzd" extends="login-default" namespace="/sjzd">
+		<action name="dataDictionaryIndex" method="dataDictionaryIndex" class="com.system.action.DataDictionaryAction">
+			<result name="success">/system/sjzd/dataDictionary_index.jsp</result>
+		</action>
+		<action name="dataDictionaryList" method="dataDictionaryList" class="com.system.action.DataDictionaryAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="dataDictionaryEdit" method="dataDictionaryEdit" class="com.system.action.DataDictionaryAction">
+			<result name="success">/system/sjzd/dataDictionary_edit.jsp</result>
+		</action>
+		<action name="dataDictionarySaveUpdate" method="dataDictionarySaveUpdate" class="com.system.action.DataDictionaryAction">
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="dataDictionaryDelete" method="dataDictionaryDelete" class="com.system.action.DataDictionaryAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="comboBoxJsonArrayData" method="comboBoxJsonArrayData" class="com.system.action.DataDictionaryAction">
+			<result type="json">
+				<param name="root">jsonArray</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,18 @@
+标题: SQL Server 安装程序失败。
+------------------------------
+
+SQL Server 安装程序遇到以下错误:
+
+sku。
+
+------------------------------
+按钮:
+
+确定
+------------------------------
+安装注意：
+安装SQL2008之前，必须预先安装.NET Framework 3.5，和Windows Installer 4.5 Redistributable，如果你安装了Microsoft Visual Studio 2008，那么您还必须升级到SP1！
+.NET Framework 3.5下载地址：
+http://download.microsoft.com/download/7/0/3/703455ee-a747-4cc8-bd3e-98a615c3aedb/dotNetFx35setup.exe
+Windows Installer 4.5 Redistributable下载地址：
+http://www.microsoft.com/downloads/details.aspx?FamilyID=5a58b56f-60b6-4412-95b9-54d056d6f9f4&DisplayLang=zh-cn#filelist

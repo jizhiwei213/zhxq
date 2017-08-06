@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.lonewolf.jcxx.model.ZhxqRoomModel" table="zhxq_room">
+        <id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" length="100" />
+        </property>
+         <property name="mendong" type="java.lang.String">
+            <column name="mendong" length="10" />
+        </property>
+         <property name="danyuan" type="java.lang.String">
+            <column name="danyuan" length="10" />
+        </property>
+        <property name="menpaihao" type="java.lang.String">
+            <column name="menpaihao" length="100" />
+        </property>
+         <property name="huzhuname" type="java.lang.String">
+            <column name="huzhuname" length="100" />
+        </property>
+        <many-to-one name="xiaoqu" column="xiaoqu_id" class="com.lonewolf.jcxx.model.XiaoquModel" not-found="ignore"></many-to-one>
+		<many-to-one name="yezhu" column="yezhu_id" class="com.system.model.UserModel" not-found="ignore"></many-to-one>
+		 <set name="users" table="zhxq_userroom_rel" lazy="false">
+        	<key column="ROOM_ID"></key>
+        	<many-to-many column="USER_ID" class="com.system.model.UserModel"></many-to-many>
+        </set>
+		<property name="mianji"  column="mianji"  type="java.lang.Double"/>
+		<property name="insertTime" />
+        <property name="updateTime" />
+    </class>
+</hibernate-mapping>

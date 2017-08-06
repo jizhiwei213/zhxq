@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+
+<beans>
+	<import resource="applicationContext-service.xml" />
+	
+	<bean id="functionService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.system.service.FunctionService">
+				<property name="functionDAO" ref="functionDAO"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="operationService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.system.service.OperationService">
+				<property name="operationDAO" ref="operationDAO"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="userService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.system.service.UserService">
+				<property name="userDAO" ref="userDAO"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="roleService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.system.service.RoleService">
+				<property name="roleDAO" ref="roleDAO"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="deptService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.system.service.DeptService">
+				<property name="deptDAO" ref="deptDAO"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="dataDictionaryService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.system.service.DataDictionaryService">
+				<property name="dataDictionaryDAO" ref="dataDictionaryDAO"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="messageService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.system.remind.service.MessageService">
+				<property name="messageDAO" ref="messageDAO"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="fileSerivce" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.web.service.FileService">
+			</bean>
+		</property>
+	</bean>
+	
+	
+	<bean id="zhxqShenService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.lonewolf.jcxx.service.ZhxqShenService">
+				<property name="zhxqShenDAO" ref="zhxqShenDAO"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="zhxqShiService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.lonewolf.jcxx.service.ZhxqShiService">
+				<property name="zhxqShiDAO" ref="zhxqShiDAO"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="zhxqQuService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.lonewolf.jcxx.service.ZhxqQuService">
+				<property name="zhxqQuDAO" ref="zhxqQuDAO"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="gsqUserService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.lonewolf.jcxx.service.GsqUserService">
+				<property name="gsqUserDAO" ref="gsqUserDAO"></property>
+			</bean>
+		</property>
+	</bean>
+	<!-- xiaoqu -->
+	<bean id="zhxqWygsSevice" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.lonewolf.jcxx.service.ZhxqWygsService">
+				<property name="zhxqWygsDAO" ref="zhxqWygsDAO"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="xiaoquService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.lonewolf.jcxx.service.XiaoquService">
+				<property name="xiaoquDAO" ref="xiaoquDAO"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="zhxqRoomService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.lonewolf.jcxx.service.ZhxqRoomService">
+				<property name="zhxqRoomDAO" ref="zhxqRoomDAO"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="zhxqWyfbzSevice" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.lonewolf.jcxx.service.ZhxqWyfbzService">
+				<property name="zhxqWyfbzDAO" ref="zhxqWyfbzDAO"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="zhxqJiaofeiService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.lonewolf.jiaofei.service.ZhxqJiaofeiService">
+				<property name="zhxqJiaofeiDAO" ref="zhxqJiaofeiDAO"></property>
+			</bean>
+		</property>
+	</bean>
+</beans> 

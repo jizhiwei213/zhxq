@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="yhqx" extends="login-default" namespace="/yhqx">
+		<action name="roleIndex" method="roleIndex" class="com.system.action.RoleAction">
+			<result name="success">/system/jsgl/role_index.jsp</result>
+		</action>
+		<action name="roleList" method="roleList" class="com.system.action.RoleAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="roleEdit" method="roleEdit" class="com.system.action.RoleAction">
+			<result name="success">/system/jsgl/role_edit.jsp</result>
+		</action>
+		<action name="roleSaveUpdate" method="roleSaveUpdate" class="com.system.action.RoleAction">
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="roleDelete" method="roleDelete" class="com.system.action.RoleAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="funcTree" method="funcTree" class="com.system.action.RoleAction">
+			<result type="json">
+				<param name="root">jsonArray</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+		<action name="userIndex" method="userIndex" class="com.system.action.UserAction">
+			<result name="success">/system/yhgl/user_index.jsp</result>
+		</action>
+		<action name="userList" method="userList" class="com.system.action.UserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="userEdit" method="userEdit" class="com.system.action.UserAction">
+			<result name="success">/system/yhgl/user_edit.jsp</result>
+		</action>
+		<action name="userSaveUpdate" method="userSaveUpdate" class="com.system.action.UserAction">
+			<result name="success">/system/yhgl/user_index.jsp</result>
+		</action>
+		<action name="userInfoIndex" method="userInfoIndex" class="com.system.action.UserAction">
+			<result name="success">/jcxx/jxs/user_index.jsp</result>
+		</action>
+		<action name="userInfoList" method="userInfoList" class="com.system.action.UserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="userInfo" method="userInfo" class="com.system.action.UserAction">
+			<result name="success">/jcxx/jxs/user_edit.jsp</result>
+		</action>
+		<action name="userInfoUpdate" method="userInfoUpdate" class="com.system.action.UserAction">
+			<result name="success">/jcxx/jxs/user_index.jsp</result>
+		</action>
+		<action name="userDelete" method="userDelete" class="com.system.action.UserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="deptIndex" method="deptIndex" class="com.system.action.DeptAction">
+			<result name="success">/system/bmgl/dept_index.jsp</result>
+		</action>
+		<action name="deptList" method="deptList" class="com.system.action.DeptAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="deptEdit" method="deptEdit" class="com.system.action.DeptAction">
+			<result name="success">/system/bmgl/dept_edit.jsp</result>
+		</action>
+		<action name="deptSaveUpdate" method="deptSaveUpdate" class="com.system.action.DeptAction">
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="deptDelete" method="deptDelete" class="com.system.action.DeptAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="deptTree" method="deptTree" class="com.system.action.DeptAction">
+			<result type="json">
+				<param name="root">jsonArray</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="deptTree2" method="deptTree2" class="com.system.action.DeptAction">
+			<result type="json">
+				<param name="root">jsonArray</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.lonewolf.jcxx.model.UserRoomRelModel" table="zhxq_userroom_rel">
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="32" />
+			<generator class="uuid.hex" />
+		</id>
+		<many-to-one name="user" column="USER_ID" class="com.system.model.UserModel" not-found="ignore"></many-to-one>
+		<many-to-one name="room" column="ROOM_ID" class="com.lonewolf.jcxx.model.ZhxqRoomModel" not-found="ignore"></many-to-one>
+		<property name="insertTime" />
+		<property name="updateTime" />
+	</class>
+</hibernate-mapping>

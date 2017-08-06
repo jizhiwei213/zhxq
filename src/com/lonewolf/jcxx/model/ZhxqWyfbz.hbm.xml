@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.lonewolf.jcxx.model.ZhxqWyfbzModel" table="zhxq_wyfbz">
+        <id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="biaozhun" type="java.lang.Double">
+            <column name="biaozhun" />
+        </property>
+        <property name="sfbiaozhun" type="java.lang.Double">
+            <column name="sfbiaozhun" />
+        </property>
+        <property name="dfbiaozhun" type="java.lang.Double">
+            <column name="dfbiaozhun" />
+        </property>
+        <property name="rqbiaozhun" type="java.lang.Double">
+            <column name="rqbiaozhun" />
+        </property>
+         <property name="nqf" type="java.lang.Double">
+            <column name="nqf" />
+        </property>
+        <property name="qitabz" type="java.lang.Double">
+            <column name="qita_bz"/>
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="remark" length="500" />
+        </property>
+        <many-to-one name="xiaoqu" column="xiaoqu_id" class="com.lonewolf.jcxx.model.XiaoquModel" not-found="ignore"></many-to-one>
+		<property name="insertTime" />
+        <property name="updateTime" />
+    </class>
+</hibernate-mapping>

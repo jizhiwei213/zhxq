@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.system.remind.model.MessageModel" table="MESSAGE">
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="32" />
+			<generator class="uuid.hex" />
+		</id>
+		<property name="content" column="CONTENT" length="200" />
+		<property name="type" column="TYPE" length="10" />
+		<property name="dueDate" />
+		<property name="isStop" />
+
+		<property name="insertTime" />
+		<property name="updateTime" />
+	</class>
+</hibernate-mapping>

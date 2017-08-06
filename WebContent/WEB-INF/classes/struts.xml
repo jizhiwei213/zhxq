@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.action.excludePattern" value="/services.*"/>
+	<package name="login-default" extends="json-default">
+		<interceptors>
+			<interceptor name="loginInterceptor" class="com.system.interceptor.LoginInterceptor" />
+			<interceptor-stack name="loginDefault">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="loginInterceptor" />
+			</interceptor-stack>
+			<interceptor-stack name="tokenDefault">
+				<interceptor-ref name="loginDefault" />
+				<interceptor-ref name="token" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="loginDefault"></default-interceptor-ref>
+		
+		<global-results>
+			<result name="login" type="redirect">/main/login.jsp</result>
+			<result name="invalid.token" type="redirect">/main/login.jsp</result>
+		</global-results>
+	</package>
+	<include file="struts-search.xml" />
+	<include file="struts-main.xml" />
+	<include file="struts-out.xml" />
+	<include file="struts-yhqx.xml" />
+	<include file="struts-sjzd.xml" />
+	<include file="struts-jcxx.xml" />
+	<include file="struts-jcxx-yhgl.xml" />
+</struts>

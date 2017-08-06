@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="jcxx" extends="login-default" namespace="/jcxx">
+	
+		<!-- 小区信息 -->
+		<action name="zhxqShenIndex" method="zhxqShenIndex" class="com.lonewolf.jcxx.action.ZhxqShenAction">
+			<result name="success">/jcxx/zhxqquyu/shen_index.jsp</result>
+		</action>
+		<action name="zhxqShenList" method="zhxqShenList" class="com.lonewolf.jcxx.action.ZhxqShenAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="zhxqShenEdit" method="zhxqShenEdit" class="com.lonewolf.jcxx.action.ZhxqShenAction">
+			<result name="success">/jcxx/zhxqquyu/shen_edit.jsp</result>
+		</action>
+		<action name="zhxqShenSaveUpdate" method="zhxqShenSaveUpdate" class="com.lonewolf.jcxx.action.ZhxqShenAction">
+			<interceptor-ref name="tokenDefault"/>
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="zhxqShenDelete" method="zhxqShenDelete" class="com.lonewolf.jcxx.action.ZhxqShenAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="comboBoxShenJsonArrayData" method="comboBoxShenJsonArrayData" class="com.lonewolf.jcxx.action.ZhxqShenAction">
+			<result type="json">
+				<param name="root">jsonArray</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+		<!-- 小区信息 -->
+		<action name="zhxqShiIndex" method="zhxqShiIndex" class="com.lonewolf.jcxx.action.ZhxqShiAction">
+			<result name="success">/jcxx/zhxqquyu/shi_index.jsp</result>
+		</action>
+		<action name="zhxqShiList" method="zhxqShiList" class="com.lonewolf.jcxx.action.ZhxqShiAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="zhxqShiEdit" method="zhxqShiEdit" class="com.lonewolf.jcxx.action.ZhxqShiAction">
+			<result name="success">/jcxx/zhxqquyu/shi_edit.jsp</result>
+		</action>
+		<action name="zhxqShiSaveUpdate" method="zhxqShiSaveUpdate" class="com.lonewolf.jcxx.action.ZhxqShiAction">
+			<interceptor-ref name="tokenDefault"/>
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="zhxqShiDelete" method="zhxqShiDelete" class="com.lonewolf.jcxx.action.ZhxqShiAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="comboBoxShiJsonArrayData" method="comboBoxShiJsonArrayData" class="com.lonewolf.jcxx.action.ZhxqShiAction">
+			<result type="json">
+				<param name="root">jsonArray</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<!-- 小区信息 -->
+		<action name="zhxqQuIndex" method="zhxqQuIndex" class="com.lonewolf.jcxx.action.ZhxqQuAction">
+			<result name="success">/jcxx/zhxqquyu/qu_index.jsp</result>
+		</action>
+		<action name="zhxqQuList" method="zhxqQuList" class="com.lonewolf.jcxx.action.ZhxqQuAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="zhxqQuEdit" method="zhxqQuEdit" class="com.lonewolf.jcxx.action.ZhxqQuAction">
+			<result name="success">/jcxx/zhxqquyu/qu_edit.jsp</result>
+		</action>
+		<action name="zhxqQuSaveUpdate" method="zhxqQuSaveUpdate" class="com.lonewolf.jcxx.action.ZhxqQuAction">
+			<interceptor-ref name="tokenDefault"/>
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="zhxqQuDelete" method="zhxqQuDelete" class="com.lonewolf.jcxx.action.ZhxqQuAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="comboBoxQuJsonArrayData" method="comboBoxQuJsonArrayData" class="com.lonewolf.jcxx.action.ZhxqQuAction">
+			<result type="json">
+				<param name="root">jsonArray</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<!-- 物业公司信息 -->
+		<action name="zhxqWygsIndex" method="zhxqWygsIndex" class="com.lonewolf.jcxx.action.ZhxqWygsAction">
+			<result name="success">/jcxx/wygs/wygs_index.jsp</result>
+		</action>
+		<action name="zhxqWygsList" method="zhxqWygsList" class="com.lonewolf.jcxx.action.ZhxqWygsAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="zhxqWygsEdit" method="zhxqWygsEdit" class="com.lonewolf.jcxx.action.ZhxqWygsAction">
+			<result name="success">/jcxx/wygs/wygs_edit.jsp</result>
+		</action>
+		<action name="zhxqWygsSaveUpdate" method="zhxqWygsSaveUpdate" class="com.lonewolf.jcxx.action.ZhxqWygsAction">
+			<interceptor-ref name="tokenDefault"/>
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="zhxqWygsDelete" method="zhxqWygsDelete" class="com.lonewolf.jcxx.action.ZhxqWygsAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="comboBoxWygsJsonArrayData" method="comboBoxWygsJsonArrayData" class="com.lonewolf.jcxx.action.ZhxqWygsAction">
+			<result type="json">
+				<param name="root">jsonArray</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<!-- 小区信息 -->
+		<action name="xiaoquIndex" method="xiaoquIndex" class="com.lonewolf.jcxx.action.XiaoquAction">
+			<result name="success">/jcxx/xiaoqu/xiaoqu_index.jsp</result>
+		</action>
+		<action name="xiaoquList" method="xiaoquList" class="com.lonewolf.jcxx.action.XiaoquAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="xiaoquEdit" method="xiaoquEdit" class="com.lonewolf.jcxx.action.XiaoquAction">
+			<result name="success">/jcxx/xiaoqu/xiaoqu_edit.jsp</result>
+		</action>
+		<action name="xiaoquSaveUpdate" method="xiaoquSaveUpdate" class="com.lonewolf.jcxx.action.XiaoquAction">
+			<interceptor-ref name="tokenDefault"/>
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="xiaoquDelete" method="xiaoquDelete" class="com.lonewolf.jcxx.action.XiaoquAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="comboBoxXiaoquJsonArrayData" method="comboBoxXiaoquJsonArrayData" class="com.lonewolf.jcxx.action.XiaoquAction">
+			<result type="json">
+				<param name="root">jsonArray</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+		
+		<!-- 小区信息 -->
+		<action name="zhxqRoomIndex" method="zhxqRoomIndex" class="com.lonewolf.jcxx.action.ZhxqRoomAction">
+			<result name="success">/jcxx/room/room_index.jsp</result>
+		</action>
+		<action name="zhxqRoomList" method="zhxqRoomList" class="com.lonewolf.jcxx.action.ZhxqRoomAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="zhxqRoomByYzIndex" method="zhxqRoomByYzIndex" class="com.lonewolf.jcxx.action.ZhxqRoomAction">
+			<result name="success">/jcxx/room/roomyezhu_index.jsp</result>
+		</action>
+		<action name="zhxqRoomByYzList" method="zhxqRoomByYzList" class="com.lonewolf.jcxx.action.ZhxqRoomAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+		<action name="zhxqRoomEdit" method="zhxqRoomEdit" class="com.lonewolf.jcxx.action.ZhxqRoomAction">
+			<result name="success">/jcxx/room/room_edit.jsp</result>
+		</action>
+		<action name="zhxqRoomYzEdit" method="zhxqRoomYzEdit" class="com.lonewolf.jcxx.action.ZhxqRoomAction">
+			<result name="success">/jcxx/room/roomyezhu_edit.jsp</result>
+		</action>
+		<action name="zhxqRoomSaveUpdate" method="zhxqRoomSaveUpdate" class="com.lonewolf.jcxx.action.ZhxqRoomAction">
+			<interceptor-ref name="tokenDefault"/>
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="zhxqRoomYzSaveUpdate" method="zhxqRoomYzSaveUpdate" class="com.lonewolf.jcxx.action.ZhxqRoomAction">
+			<interceptor-ref name="tokenDefault"/>
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="zhxqRoomDelete" method="zhxqRoomDelete" class="com.lonewolf.jcxx.action.ZhxqRoomAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="comboBoxZhxqRoomJsonArrayData" method="comboBoxZhxqRoomJsonArrayData" class="com.lonewolf.jcxx.action.ZhxqRoomAction">
+			<result type="json">
+				<param name="root">jsonArray</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		 <action name="zhxqRoomImport" method="zhxqRoomImport" class="com.lonewolf.jcxx.action.ZhxqRoomAction">
+            <result name="success">/jcxx/room/room_import.jsp</result>
+        </action>
+        <action name="zhxqRoomUpload" method="zhxqRoomUpload" class="com.lonewolf.jcxx.action.ZhxqRoomAction">
+           <result type="stream" >
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+        </action>
+         <action name="roomExportTemplet" method="roomExportTemplet" class="com.lonewolf.jcxx.action.ZhxqRoomAction">
+           <result name="success">/jcxx/room/room_index.jsp</result>
+        </action>
+        <action name="comboBoxZhxqRoomForMendongJsonArrayData" method="comboBoxZhxqRoomForMendongJsonArrayData" class="com.lonewolf.jcxx.action.ZhxqRoomAction">
+			<result type="json">
+				<param name="root">jsonArray</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="comboBoxZhxqRoomForDanyuanJsonArrayData" method="comboBoxZhxqRoomForDanyuanJsonArrayData" class="com.lonewolf.jcxx.action.ZhxqRoomAction">
+			<result type="json">
+				<param name="root">jsonArray</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+        
+        
+		<!-- 物业费标准-->
+		<action name="zhxqWyfbzIndex" method="zhxqWyfbzIndex" class="com.lonewolf.jcxx.action.ZhxqWyfbzAction">
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="zhxqWyfbzList" method="zhxqWyfbzList" class="com.lonewolf.jcxx.action.ZhxqWyfbzAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="zhxqWyfbzEdit" method="zhxqWyfbzEdit" class="com.lonewolf.jcxx.action.ZhxqWyfbzAction">
+			<result name="success">/jcxx/zhxqwyfbz/wyfbz_edit.jsp</result>
+		</action>
+		<action name="zhxqWyfbzSaveUpdate" method="zhxqWyfbzSaveUpdate" class="com.lonewolf.jcxx.action.ZhxqWyfbzAction">
+			<interceptor-ref name="tokenDefault"/>
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="zhxqWyfbzDelete" method="zhxqWyfbzDelete" class="com.lonewolf.jcxx.action.ZhxqWyfbzAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+		
+		<!-- 缴费-->
+		<action name="zhxqJiaofeiWyglyIndex" method="zhxqJiaofeiWyglyIndex" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result name="success">/jiaofei/jiaofei/jiaofeiwygly_index.jsp</result>
+		</action>
+		<action name="zhxqJiaofeiWyglyList" method="zhxqJiaofeiWyglyList" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="zhxqJiaofeiWyglyIndex2" method="zhxqJiaofeiWyglyIndex2" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result name="success">/jiaofei/jiaofei/jiaofeiwygly_index2.jsp</result>
+		</action>
+		<action name="zhxqJiaofeiWyglyList2" method="zhxqJiaofeiWyglyList2" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+			<action name="zhxqJiaofeiYwyIndex" method="zhxqJiaofeiYwyIndex" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result name="success">/jiaofei/jiaofei/jiaofeiywy_index.jsp</result>
+		</action>
+		<action name="zhxqJiaofeiYwyList" method="zhxqJiaofeiYwyList" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+		<action name="ywyJiaofei" method="ywyJiaofei" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+		<action name="zhxqJiaofeiYzIndex" method="zhxqJiaofeiYzIndex" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result name="success">/jiaofei/jiaofei/jiaofeiyz_index.jsp</result>
+		</action>
+		<action name="zhxqJiaofeiYzList" method="zhxqJiaofeiYzList" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+		
+		<action name="zhxqJiaofeiZjlIndex" method="zhxqJiaofeiZjlIndex" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result name="success">/jiaofei/jiaofei/jiaofeizjl_index.jsp</result>
+		</action>
+		<action name="zhxqJiaofeiZjlList" method="zhxqJiaofeiZjlList" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+		<action name="zhxqJiaofeiQyjlIndex" method="zhxqJiaofeiQyjlIndex" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result name="success">/jiaofei/jiaofei/jiaofeiqyjl_index.jsp</result>
+		</action>
+		<action name="zhxqJiaofeiQyjlList" method="zhxqJiaofeiQyjlList" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+		<action name="chexiaoJiaofei" method="chexiaoJiaofei" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="zhxqJiaofeiWyglyConf" method="zhxqJiaofeiWyglyConf" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+		<action name="zhxqJiaofeiCwIndex" method="zhxqJiaofeiCwIndex" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result name="success">/jiaofei/jiaofei/jiaofeicw_index.jsp</result>
+		</action>
+		<action name="zhxqJiaofeiCwList" method="zhxqJiaofeiCwList" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+		
+		
+		 <action name="zhxqJiaofeiWyglyImport" method="zhxqJiaofeiWyglyImport" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+            <result name="success">/jiaofei/jiaofei/jiaofeiwygly_import.jsp</result>
+        </action>
+        <action name="zhxqJiaofeiWyglyUpload" method="zhxqJiaofeiWyglyUpload" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+           <result type="stream" >
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+        </action>
+         <action name="zhxqJiaofeiWyglyExportTemplet" method="zhxqJiaofeiWyglyExportTemplet" class="com.lonewolf.jiaofei.action.ZhxqJiaofeiAction">
+           <result name="success">/jiaofei/jiaofei/jiaofeiwygly_index.jsp</result>
+        </action>
+	</package>
+</struts>

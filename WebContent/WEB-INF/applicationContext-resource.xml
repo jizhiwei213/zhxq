@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="lobHandler">
+			<bean class="org.springframework.jdbc.support.lob.DefaultLobHandler" />
+		</property>
+		<property name="mappingLocations">
+			<list>
+				<value>classpath*:/com/**/model/*.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.proxool.pool_alias">proxool_pool</prop>
+				<prop key="hibernate.proxool.xml">proxool.xml</prop>
+				<prop key="hibernate.connection.provider_class">org.hibernate.connection.ProxoolConnectionProvider</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.format_sql">false</prop>
+				<prop key="hibernate.use_sql_comments">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.query.substitutions">hqlFunction=SQLFUNC</prop>
+				<prop key="hibernate.jdbc.fetch_size">50</prop>
+				<prop key="hibernate.max_fetch_depth">1</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 配置定时器 -->
+	<bean id="contextListener" class="com.servlet.ContextListener"></bean>
+	<!-- 配置定时器 
+	<bean id="quartzScheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="startupDelay" value="1"></property>
+		<property name="triggers">
+			<list>
+				<ref bean="trigger" />
+			</list>
+		</property>
+	</bean>
+	<bean id="trigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="jobDetail" />
+		</property>
+		<property name="cronExpression">
+			<value>0 30 23 * * ? *</value>
+		</property>
+	</bean>
+	<bean id="jobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<bean class="com.lonewolf.gasstation.task.EnergyDataTask"/>
+		</property>
+		<property name="targetMethod">
+			<value>doTask</value>
+		</property>
+	</bean>
+
+
+	<bean id="quartzScheduler1" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="startupDelay" value="1"></property>
+		<property name="triggers">
+			<list>
+				<ref bean="trigger1" />
+			</list>
+		</property>
+	</bean>
+	<bean id="trigger1" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="jobDetail1" />
+		</property>
+		<property name="cronExpression">
+			<value>0 25 22 * * ? *</value>
+		</property>
+	</bean>
+	<bean id="jobDetail1"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<bean class="com.lonewolf.gasstation.task.EnergyDataTask1"/>
+		</property>
+		<property name="targetMethod">
+			<value>doTask</value>
+		</property>
+	</bean>
+
+
+
+<bean id="quartzScheduler2" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="startupDelay" value="1"></property>
+		<property name="triggers">
+			<list>
+				<ref bean="trigger2" />
+			</list>
+		</property>
+	</bean>
+	<bean id="trigger2" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="jobDetail2" />
+		</property>
+		<property name="cronExpression">
+			<value>0 30 22 ? * TUE</value>
+		</property>
+	</bean>
+	<bean id="jobDetail2"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<bean class="com.lonewolf.gasstation.task.EnergyDataTask2"/>
+		</property>
+		<property name="targetMethod">
+			<value>doTask</value>
+		</property>
+	</bean>
+	 -->
+</beans>

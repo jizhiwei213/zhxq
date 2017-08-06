@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.lonewolf.jiaofei.model.ZhxqJiaofeiModel" table="zhxq_jiaofei">
+        <id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="zhxqyear" type="java.lang.Integer">
+            <column name="zhxq_year"/>
+        </property>
+        <property name="zhxqmonth" type="java.lang.Integer">
+            <column name="zhxq_month"/>
+        </property>
+         <property name="wyf" type="java.lang.Double">
+            <column name="wyf"/>
+        </property>
+        <property name="gnf" type="java.lang.Double">
+            <column name="gnf"/>
+        </property>
+         <property name="cwf" type="java.lang.Double">
+            <column name="cwf"/>
+        </property>
+         <property name="otherfy" type="java.lang.Double">
+            <column name="otherfy"/>
+        </property>
+        <property name="dianfei"  column="dianfei"  type="java.lang.Double"/>
+        <property name="dianliang"  column="dianliang"  type="java.lang.Double"/>
+        <property name="ruanqifei"  column="ruanqifei"  type="java.lang.Double"/>
+        <property name="ruanqifeiliang"  column="ruanqifeiliang"  type="java.lang.Double"/>
+        <property name="shuifei"  column="shuifei"  type="java.lang.Double"/>
+        <property name="shuifeiliang"  column="shuifeiliang"  type="java.lang.Double"/>
+        <many-to-one name="room" column="room_id" class="com.lonewolf.jcxx.model.ZhxqRoomModel" not-found="ignore"></many-to-one>
+		<property name="jiaofeidate"  column="jiaofei_date"  type="java.lang.String" length="23"/>
+		<property name="jiaofeistatus"  column="jiaofei_status"  type="java.lang.String" length="2"/>
+		<property name="dianliangdate"  column="dianliang_date"  type="java.lang.String" length="23"/>
+		<property name="dianliangstatus"  column="dianliang_status"  type="java.lang.String" length="2"/>
+		<property name="shuifeidate"  column="shuifei_date"  type="java.lang.String" length="23"/>
+		<property name="shuifeistatus"  column="shuifei_status"  type="java.lang.String" length="2"/>
+		<property name="ruanqifeidate"  column="ruanqifei_date"  type="java.lang.String" length="23"/>
+		<property name="ruanqifeistatus"  column="ruanqifei_status"  type="java.lang.String" length="2"/>
+		<property name="gnfdate"  column="gnf_date"  type="java.lang.String" length="23"/>
+		<property name="gnfstatus"  column="gnf_status"  type="java.lang.String" length="2"/>
+		<many-to-one name="ywy" column="ywy_id" class="com.system.model.UserModel" not-found="ignore"></many-to-one>
+		<property name="insertTime" />
+        <property name="updateTime" />
+    </class>
+</hibernate-mapping>

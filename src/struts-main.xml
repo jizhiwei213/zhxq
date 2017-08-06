@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="main" extends="login-default" namespace="/main">
+		<action name="main" method="main" class="com.system.action.MainAction">
+			<result name="success">/main/main.jsp</result>
+		</action>
+		<action name="tabs" method="tabs" class="com.system.action.MainAction">
+			<result name="success">/main/tabs.jsp</result>
+		</action>
+		<action name="registIndex" method="registIndex" class="com.system.action.MainAction">
+			<result name="success">/main/regist.jsp</result>
+		</action>
+		<action name="left" method="left" class="com.system.action.MainAction">
+			<result name="success">/main/left.jsp</result>
+		</action>
+		<action name="leftChildren" method="leftChildren" class="com.system.action.MainAction">
+			<result name="success">/main/left_children.jsp</result>
+		</action>
+		<action name="excelExport" method="excelExport" class="com.system.action.MainAction">
+			<result name="success">/default.jsp</result>
+		</action>
+		<action name="changePwd" method="changePwd" class="com.system.action.MainAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+	</package>
+</struts>

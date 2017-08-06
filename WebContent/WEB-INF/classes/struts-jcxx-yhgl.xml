@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="jcxxyhgl" extends="login-default" namespace="/jcxxyhgl">
+		<action name="gsqUserIndex" method="gsqUserIndex" class="com.lonewolf.jcxx.action.GsqUserAction">
+			<result name="success">/jcxx/jcxxyhgl/gsquser_index.jsp</result>
+		</action>
+		<action name="gsqUserList" method="gsqUserList" class="com.lonewolf.jcxx.action.GsqUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="gsqUserEdit" method="gsqUserEdit" class="com.lonewolf.jcxx.action.GsqUserAction">
+			<result name="success">/jcxx/jcxxyhgl/gsquser_edit.jsp</result>
+		</action>
+		<action name="gsqUserSaveUpdate" method="gsqUserSaveUpdate" class="com.lonewolf.jcxx.action.GsqUserAction">
+			<result name="success">/jcxx/jcxxyhgl/gsquser_index.jsp</result>
+		</action>
+		<action name="gsqUserDelete" method="gsqUserDelete" class="com.lonewolf.jcxx.action.GsqUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="gsqUserStop" method="gsqUserStop" class="com.lonewolf.jcxx.action.GsqUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="gsqUserStart" method="gsqUserStart" class="com.lonewolf.jcxx.action.GsqUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+		<!-- 物业公司人员 -->
+		<action name="wyryIndex" method="wyryIndex" class="com.lonewolf.jcxx.action.WyryUserAction">
+			<result name="success">/jcxx/jcxxyhgl/wyry_index.jsp</result>
+		</action>
+		<action name="wyryList" method="wyryList" class="com.lonewolf.jcxx.action.WyryUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="wyryEdit" method="wyryEdit" class="com.lonewolf.jcxx.action.WyryUserAction">
+			<result name="success">/jcxx/jcxxyhgl/wyry_edit.jsp</result>
+		</action>
+		<action name="wyrySaveUpdate" method="wyrySaveUpdate" class="com.lonewolf.jcxx.action.WyryUserAction">
+			<result name="success">/jcxx/jcxxyhgl/wyry_index.jsp</result>
+		</action>
+		<action name="wyryDelete" method="wyryDelete" class="com.lonewolf.jcxx.action.WyryUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="wyryStop" method="wyryStop" class="com.lonewolf.jcxx.action.WyryUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="wyryStart" method="wyryStart" class="com.lonewolf.jcxx.action.WyryUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+		<!-- 区域管理员 -->
+		<action name="qyglyIndex" method="qyglyIndex" class="com.lonewolf.jcxx.action.QyglyUserAction">
+			<result name="success">/jcxx/jcxxyhgl/qygly_index.jsp</result>
+		</action>
+		<action name="qyglyList" method="qyglyList" class="com.lonewolf.jcxx.action.QyglyUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="qyglyEdit" method="qyglyEdit" class="com.lonewolf.jcxx.action.QyglyUserAction">
+			<result name="success">/jcxx/jcxxyhgl/qygly_edit.jsp</result>
+		</action>
+		<action name="qyglySaveUpdate" method="qyglySaveUpdate" class="com.lonewolf.jcxx.action.QyglyUserAction">
+			<result name="success">/jcxx/jcxxyhgl/qygly_index.jsp</result>
+		</action>
+		<action name="qyglyDelete" method="qyglyDelete" class="com.lonewolf.jcxx.action.QyglyUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="qyglyStop" method="qyglyStop" class="com.lonewolf.jcxx.action.QyglyUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="qyglyStart" method="qyglyStart" class="com.lonewolf.jcxx.action.QyglyUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+		
+		<!-- 业务员 -->
+		<action name="ywyIndex" method="ywyIndex" class="com.lonewolf.jcxx.action.YwyUserAction">
+			<result name="success">/jcxx/jcxxyhgl/ywy_index.jsp</result>
+		</action>
+		<action name="ywyList" method="ywyList" class="com.lonewolf.jcxx.action.YwyUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="ywyEdit" method="ywyEdit" class="com.lonewolf.jcxx.action.YwyUserAction">
+			<result name="success">/jcxx/jcxxyhgl/ywy_edit.jsp</result>
+		</action>
+		<action name="ywySaveUpdate" method="ywySaveUpdate" class="com.lonewolf.jcxx.action.YwyUserAction">
+			<result name="success">/jcxx/jcxxyhgl/ywy_index.jsp</result>
+		</action>
+		<action name="ywyDelete" method="ywyDelete" class="com.lonewolf.jcxx.action.YwyUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="ywyStop" method="ywyStop" class="com.lonewolf.jcxx.action.YwyUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="ywyStart" method="ywyStart" class="com.lonewolf.jcxx.action.YwyUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<!-- 财务员 -->
+		<action name="cwyIndex" method="cwyIndex" class="com.lonewolf.jcxx.action.CwyUserAction">
+			<result name="success">/jcxx/jcxxyhgl/cwy_index.jsp</result>
+		</action>
+		<action name="cwyList" method="cwyList" class="com.lonewolf.jcxx.action.CwyUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="cwyEdit" method="cwyEdit" class="com.lonewolf.jcxx.action.CwyUserAction">
+			<result name="success">/jcxx/jcxxyhgl/cwy_edit.jsp</result>
+		</action>
+		<action name="cwySaveUpdate" method="cwySaveUpdate" class="com.lonewolf.jcxx.action.CwyUserAction">
+			<result name="success">/jcxx/jcxxyhgl/cwy_index.jsp</result>
+		</action>
+		<action name="cwyDelete" method="cwyDelete" class="com.lonewolf.jcxx.action.CwyUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="cwyStop" method="cwyStop" class="com.lonewolf.jcxx.action.CwyUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="cwyStart" method="cwyStart" class="com.lonewolf.jcxx.action.CwyUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+		<!-- 业主 -->
+		<action name="yezhuIndex" method="yezhuIndex" class="com.lonewolf.jcxx.action.YezhuUserAction">
+			<result name="success">/jcxx/jcxxyhgl/yezhu_index.jsp</result>
+		</action>
+		<action name="yezhuList" method="yezhuList" class="com.lonewolf.jcxx.action.YezhuUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="yezhuEdit" method="yezhuEdit" class="com.lonewolf.jcxx.action.YezhuUserAction">
+			<result name="success">/jcxx/jcxxyhgl/yezhu_edit.jsp</result>
+		</action>
+		<action name="yezhuSaveUpdate" method="yezhuSaveUpdate" class="com.lonewolf.jcxx.action.YezhuUserAction">
+			<result name="success">/jcxx/jcxxyhgl/yezhu_index.jsp</result>
+		</action>
+		<action name="yezhuDelete" method="yezhuDelete" class="com.lonewolf.jcxx.action.YezhuUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="yezhuStop" method="yezhuStop" class="com.lonewolf.jcxx.action.YezhuUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		<action name="yezhuStart" method="yezhuStart" class="com.lonewolf.jcxx.action.YezhuUserAction">
+			<result type="json">
+				<param name="root">jsonObj</param>
+				<param name="noCache">true</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+	</package>
+</struts>

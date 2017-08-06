@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.lonewolf.jcxx.model.XiaoquModel" table="zhxq_xiaoqu">
+        <id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <property name="xiaoquName" type="java.lang.String">
+            <column name="xiaoqu_name" length="100" />
+        </property>
+        <property name="xiaoquNo" type="java.lang.String">
+            <column name="xiaoqu_no" length="100" />
+        </property>
+        <property name="xiaoquAddress" type="java.lang.String">
+            <column name="xiaoqu_address" length="500" />
+        </property>
+        <property name="xiaoquRemark" type="java.lang.String">
+            <column name="xiaoqu_remark" length="500" />
+        </property>
+        <property name="xiaoquLianxiren" type="java.lang.String">
+            <column name="xiaoqu_lianxiren" length="100" />
+        </property>
+        <property name="xiaoquLianxidianhua" type="java.lang.String">
+            <column name="xiaoqu_lianxidianhua" length="50" />
+        </property>
+           <property name="fuzeren" type="java.lang.String">
+            <column name="fuzeren" length="100" />
+        </property>
+          <property name="fuzerentel" type="java.lang.String">
+            <column name="fuzerentel" length="20" />
+        </property>
+        <many-to-one name="shen" column="shen_id" class="com.lonewolf.jcxx.model.ZhxqShenModel" not-found="ignore"></many-to-one>
+		<many-to-one name="shi" column="shi_id" class="com.lonewolf.jcxx.model.ZhxqShiModel" not-found="ignore"></many-to-one>
+		<many-to-one name="qu" column="qu_id" class="com.lonewolf.jcxx.model.ZhxqQuModel" not-found="ignore"></many-to-one>
+		<many-to-one name="wygs" column="wygs_id" class="com.lonewolf.jcxx.model.ZhxqWygsModel" not-found="ignore"></many-to-one>
+		<property name="insertTime" />
+        <property name="updateTime" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxool-config>
+	<proxool>
+		<alias>proxool_pool</alias>
+		<driver-url>jdbc:mysql://127.0.0.1:3306/zhxq?autoReconnect=true</driver-url>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="root"/>
+			<property name="password" value="jolanel"/>
+		</driver-properties>
+		<!-- 自动重连 -->
+		<house-keeping-test-sql>select sysdate()</house-keeping-test-sql>
+		<!-- 自动侦查各个连接状态的毫秒数，侦查到空闲的连接马上释放，超时销毁 -->
+		<house-keeping-sleep-time>90000</house-keeping-sleep-time>
+		<!-- 连接忙时等待的最大请求数，超过这个数量将不再接收 -->
+		<maximum-new-connections>100</maximum-new-connections>
+		<!-- 一次产生的连接数，但不能超过最大连接数 -->
+		<prototype-count>5</prototype-count>
+		<!-- 最大连接数，超过最大连接数会抛出异常 -->
+		<maximum-connection-count>5</maximum-connection-count>
+		<!-- 最小连接数 -->
+		<minimum-connection-count>2</minimum-connection-count>
+	</proxool>
+</proxool-config>

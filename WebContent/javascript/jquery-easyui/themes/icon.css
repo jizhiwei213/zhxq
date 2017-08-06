@@ -1,0 +1,209 @@
+.icon-blank{
+	background:url('icons/blank.gif') no-repeat center center;
+}
+.icon-add{
+	background:url('icons/edit_add.png') no-repeat center center;
+}
+.icon-edit{
+	background:url('icons/pencil.png') no-repeat center center;
+}
+.icon-remove{
+	background:url('icons/edit_remove.png') no-repeat center center;
+}
+.icon-save{
+	background:url('icons/filesave.png') no-repeat center center;
+}
+.icon-cut{
+	background:url('icons/cut.png') no-repeat center center;
+}
+.icon-ok{
+	background:url('icons/ok.png') no-repeat center center;
+}
+.icon-no{
+	background:url('icons/no.png') no-repeat center center;
+}
+.icon-cancel{
+	background:url('icons/cancel.png') no-repeat center center;
+}
+.icon-reload{
+	background:url('icons/reload.png') no-repeat center center;
+}
+.icon-search{
+	background:url('icons/search.png') no-repeat center center;
+}
+.icon-print{
+	background:url('icons/print.png') no-repeat center center;
+}
+.icon-help{
+	background:url('icons/help.png') no-repeat center center;
+}
+.icon-undo{
+	background:url('icons/undo.png') no-repeat center center;
+}
+.icon-redo{
+	background:url('icons/redo.png') no-repeat center center;
+}
+.icon-back{
+	background:url('icons/back.png') no-repeat center center;
+}
+.icon-sum{
+	background:url('icons/sum.png') no-repeat center center;
+}
+.icon-tip{
+	background:url('icons/tip.png') no-repeat center center;
+}
+.icon-filter{
+	background:url('icons/filter.png') no-repeat center center;
+}
+
+.icon-mini-add{
+	background:url('icons/mini_add.png') no-repeat center center;
+}
+.icon-mini-edit{
+	background:url('icons/mini_edit.png') no-repeat center center;
+}
+.icon-mini-refresh{
+	background:url('icons/mini_refresh.png') no-repeat center center;
+}
+
+.icon-net{
+	background:url('icons/net.png') no-repeat center center;
+}
+.icon-ms{
+	background:url('icons/mingshen.png') no-repeat center center;
+}
+.icon-peaple{
+	background:url('icons/peaple_data.png') no-repeat center center;
+}
+.icon-system{
+	background:url('icons/system_set.png') no-repeat center center;
+}
+.icon-person{
+	background:url('icons/person.png') no-repeat center center;
+}
+.icon-shequ{
+	background:url('icons/shequ.png') no-repeat center center;
+}
+.icon-loudong{
+	background:url('icons/loudong.png') no-repeat center center;
+}
+.icon-loudongxx {
+	background:url('icons/loudongxx.png') no-repeat center center;
+}
+.icon-loucengxx {
+	background:url('icons/loucengxx.png') no-repeat center center;
+}
+.icon-danyuanxx {
+	background:url('icons/danyuanxx.png') no-repeat center center;
+}
+.icon-xiaoquxx {
+	background:url('icons/xiaoquxx.png') no-repeat center center;
+}
+.icon-shequxx {
+	background:url('icons/shequxx.png') no-repeat center center;
+}
+.icon-xiaoqu {
+	background:url('icons/xiaoqu.png') no-repeat center center;
+}
+.icon-chengyxx {
+	background:url('icons/chengyxx.png') no-repeat center center;
+}
+.icon-jiatingxx {
+	background:url('icons/jiatingxx.png') no-repeat center center;
+}
+.icon-zhaopinxxgl {background:url('icons/zhaopin.png') no-repeat center center;}
+.icon-yingpinzwgl {background:url('icons/yingpin.png') no-repeat center center;}
+.icon-wanggegl {background:url('icons/wangge.png') no-repeat center center;}
+.icon-wanggesjgl {background:url('icons/wanggesjgl.png') no-repeat center center;}
+.icon-wanggexx {background:url('icons/wanggexx.png') no-repeat center center;}
+.icon-wanggesj {background:url('icons/wanggesj.png') no-repeat center center;}
+.icon-wanggesjcl {background:url('icons/wanggecl.png') no-repeat center center;}
+.icon-wentigl {background:url('icons/wentigl.png') no-repeat center center;}
+.icon-wuyejzgl {background:url('icons/wuyejzgl.png') no-repeat center center;}
+.icon-wentixx {background:url('icons/wentixx.png') no-repeat center center;}
+.icon-jianyixx {background:url('icons/jianyixx.png') no-repeat center center;}
+.icon-yisheng {background:url('icons/yisheng.png') no-repeat center center;}
+.icon-shanghu {background:url('icons/shanghu.png') no-repeat center center;}
+.icon-zhaopyingp {background:url('icons/zhaopyingp.png') no-repeat center center;}
+
+.icon-zpdn {background:url('icons/zpdn.png') no-repeat center center;}
+.icon-wuyeqq {background:url('icons/wuyeqq.png') no-repeat center center;}
+.icon-wuyegs {background:url('icons/wuyegs.png') no-repeat center center;}
+.icon-jzqq {background:url('icons/jzqq.png') no-repeat center center;}
+.icon-jzgs {background:url('icons/jzgs.png') no-repeat center center;}
+.icon-dcdb {background:url('icons/dcdb.png') no-repeat center center;}
+.icon-cjwt {background:url('icons/cjwt.png') no-repeat center center;}
+.icon-yjyaznbj {background:url('icons/yjyaznbj.png') no-repeat center center;}
+.icon-yjya {background:url('icons/yjya.png') no-repeat center center;}
+.icon-gzsd {background:url('icons/gzsd.png') no-repeat center center;}
+.icon-wgsjyq {background:url('icons/wgsjyq.png') no-repeat center center;}
+.icon-yhgl {background:url('icons/yhgl.png') no-repeat center center;}
+.icon-qxgl {background:url('icons/qxgl.png') no-repeat center center;}
+.icon-wwyhsh {background:url('icons/wwyhsh.png') no-repeat center center;}
+.icon-qyxxgl {background:url('icons/qyxxgl.png') no-repeat center center;}
+.icon-xtdwgl {background:url('icons/xtdwgl.png') no-repeat center center;}
+.icon-xtyhgl {background:url('icons/xtyhgl.png') no-repeat center center;}
+.icon-gnmkgl {background:url('icons/gnmkgl.png') no-repeat center center;}
+.icon-xtjsgl {background:url('icons/xtjsgl.png') no-repeat center center;}
+.icon-yhsqjs {background:url('icons/yhsqjs.png') no-repeat center center;}
+.icon-shgl {background:url('icons/shgl.png') no-repeat center center;}
+.icon-dbdc {background:url('icons/dbdc.png') no-repeat center center;}
+.icon-qyyhgl {background:url('icons/qyyhgl.png') no-repeat center center;}
+.icon-wgxx {background:url('icons/wgxx.png') no-repeat center center;}
+.icon-jiangz {background:url('icons/jiangz.png') no-repeat center center;}
+
+.icon-huifu {background:url('icons/huifu.png') no-repeat center center;}
+.icon-reset {background:url('icons/reset.png') no-repeat center center;}
+.icon-banjie {background:url('icons/banjie.png') no-repeat center center;}
+.icon-chakan {background:url('icons/chakan.png') no-repeat center center;}
+.icon-wuxiao {background:url('icons/wuxiao.png') no-repeat center center;}
+.icon-zhuanfa {background:url('icons/zhuanfa.png') no-repeat center center;}
+
+.icon-yulan {background:url('icons/yulan.png') no-repeat center center;}
+.icon-download {background:url('icons/download.png') no-repeat center center;}
+
+.icon-bjfs {background:url('icons/bjfs.png') no-repeat center center;}
+.icon-dwlx {background:url('icons/dwlx.png') no-repeat center center;}
+.icon-ejwgsj {background:url('icons/ejwgsj.png') no-repeat center center;}
+.icon-fwxxfl {background:url('icons/fwxxfl.png') no-repeat center center;}
+.icon-hklb {background:url('icons/hklb.png') no-repeat center center;}
+.icon-hyzk {background:url('icons/hyzk.png') no-repeat center center;}
+.icon-mz {background:url('icons/mz.png') no-repeat center center;}
+.icon-qylx {background:url('icons/qylx.png') no-repeat center center;}
+.icon-rwcl {background:url('icons/rwcl.png') no-repeat center center;}
+.icon-rwgl {background:url('icons/rwgl.png') no-repeat center center;}
+.icon-rwxf {background:url('icons/rwxf.png') no-repeat center center;}
+.icon-sjtj {background:url('icons/sjtj.png') no-repeat center center;}
+.icon-sjwgsj {background:url('icons/sjwgsj.png') no-repeat center center;}
+.icon-sjzd {background:url('icons/sjzd.png') no-repeat center center;}
+.icon-wgsjfl {background:url('icons/wgsjfl.png') no-repeat center center;}
+.icon-wgsjjb {background:url('icons/wgsjjb.png') no-repeat center center;}
+.icon-wtxxfl {background:url('icons/wtxxfl.png') no-repeat center center;}
+.icon-xtgl {background:url('icons/xtgl.png') no-repeat center center;}
+.icon-yjwgsj {background:url('icons/yjwgsj.png') no-repeat center center;}
+.icon-yhzgx {background:url('icons/yhzgx.png') no-repeat center center;}
+.icon-zzmm {background:url('icons/zzmm.png') no-repeat center center;}
+
+.icon-lnr {background:url('icons/lnr.png') no-repeat center center;}
+.icon-zrzc {background:url('icons/zrzc.png') no-repeat center center;}
+.icon-drdc {background:url('icons/drdc.png') no-repeat center center;}
+.icon-msdtfw {background:url('icons/msdtfw.png') no-repeat center center;}
+.icon-czxxfb {background:url('icons/czxxfb.png') no-repeat center center;}
+.icon-dtxx {background:url('icons/dtxx.png') no-repeat center center;}
+.icon-zhzx {background:url('icons/zhzx.png') no-repeat center center;}
+.icon-bggl {background:url('icons/bggl.png') no-repeat center center;}
+.icon-gztj {background:url('icons/gztj.png') no-repeat center center;}
+.icon-gzltj {background:url('icons/gzltj.png') no-repeat center center;}
+.icon-rcap {background:url('icons/rcap.png') no-repeat center center;}
+.icon-shlx {background:url('icons/shlx.png') no-repeat center center;}
+.icon-splx {background:url('icons/splx.png') no-repeat center center;}
+.icon-mzjc {background:url('icons/mzjc.png') no-repeat center center;}
+.icon-shxxfb {background:url('icons/shxxfb.png') no-repeat center center;}
+.icon-fsd {background:url('icons/fsd.png') no-repeat center center;}
+.icon-jc {background:url('icons/jc.png') no-repeat center center;}
+.icon-zdrq {background:url('icons/zdrq.png') no-repeat center center;}
+.icon-jk {background:url('icons/jk.png') no-repeat center center;}
+.icon-spjk {background:url('icons/spjk.png') no-repeat center center;}
+.icon-mqrz {background:url('icons/mqrz.png') no-repeat center center;}
+.icon-mmfgl {background:url('icons/mmfgl.png') no-repeat center center;}
+.icon-txfs {background:url('icons/txfs.png') no-repeat center center;}
