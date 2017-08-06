@@ -2,7 +2,12 @@ package com.lonewolf.jiaofei.model;
 
 import java.text.DecimalFormat;
 
+import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import net.sf.json.JSONObject;
+
 import com.base.model.BaseModel;
 import com.lonewolf.jcxx.model.ZhxqRoomModel;
 import com.system.model.UserModel;
@@ -11,6 +16,7 @@ import com.system.model.UserModel;
  */
 public class ZhxqJiaofeiModel extends BaseModel {
 	private static final long serialVersionUID = 389262935748415781L;
+	private static final Logger log = LoggerFactory.getLogger(ZhxqJiaofeiModel.class);
 	private int zhxqyear;// 
 	private int zhxqmonth;
 	private Double wyf;
@@ -37,20 +43,6 @@ public class ZhxqJiaofeiModel extends BaseModel {
 	private UserModel ywy;
 	public JSONObject buildJson() {
 		JSONObject json = new JSONObject();
-
-		json.put("id", getId());
-		json.put("zhxqyear", zhxqyear);
-		json.put("zhxqmonth", zhxqmonth);
-		json.put("wyf", new DecimalFormat("#.#").format(wyf));
-		json.put("gnf", new DecimalFormat("#.#").format(gnf));
-		json.put("otherfy", new DecimalFormat("#.#").format(otherfy));
-		json.put("dianfei", new DecimalFormat("#.#").format(dianfei));
-		json.put("dianliang", new DecimalFormat("#.##").format(dianliang));
-		json.put("ruanqifei", new DecimalFormat("#.#").format(ruanqifei));
-		json.put("ruanqifeiliang", new DecimalFormat("#.##").format(ruanqifeiliang));
-		json.put("shuifei", new DecimalFormat("#.#").format(shuifei));
-		json.put("shuifeiliang", new DecimalFormat("#.##").format(shuifeiliang));
-		json.put("cwf", new DecimalFormat("#.#").format(cwf));
 		json.put("jiaofeidate", jiaofeidate);
 		json.put("dianliangdate", dianliangdate);
 		json.put("shuifeidate", shuifeidate);
@@ -61,31 +53,68 @@ public class ZhxqJiaofeiModel extends BaseModel {
 		json.put("ruanqifeistatus", ruanqifeistatus);
 		json.put("gnfdate", gnfdate);
 		json.put("gnfstatus", gnfstatus);
-		if(null!=room)
-		{
-			json.put("roomid", room.getId());
-			json.put("roomname", room.getName());
-			json.put("menpaihao", room.getMenpaihao());
-			json.put("mendong", room.getMendong());
-			json.put("danyuan", room.getDanyuan());
-			json.put("shenname", room.getXiaoqu().getShen().getName());
-			json.put("shiname", room.getXiaoqu().getShi().getName());
-			json.put("quname", room.getXiaoqu().getQu().getName());
-			json.put("xiaoquname", room.getXiaoqu().getXiaoquName());
-		}
-		if(null!=ywy)
-		{
-			json.put("ywyid", ywy.getId());
-			json.put("ywyname", ywy.getUserName());
-		}
-		else
-		{
-			if("0".equals(jiaofeistatus))
+		json.put("id", getId());
+		json.put("zhxqyear", zhxqyear);
+		json.put("zhxqmonth", zhxqmonth);
+		try {
+			json.put("wyf", new DecimalFormat("#.##").format(wyf));
+			json.put("gnf", new DecimalFormat("#.##").format(gnf));
+			json.put("otherfy", new DecimalFormat("#.##").format(otherfy));
+			json.put("dianfei", new DecimalFormat("#.##").format(dianfei));
+			json.put("dianliang", new DecimalFormat("#.##").format(dianliang));
+			System.out.println("ruanqifei:"+ruanqifei);
+			json.put("ruanqifei", new DecimalFormat("#.##").format(ruanqifei));
+			json.put("ruanqifeiliang", new DecimalFormat("#.##").format(ruanqifeiliang));
+			json.put("shuifei", new DecimalFormat("#.##").format(shuifei));
+			json.put("shuifeiliang", new DecimalFormat("#.##").format(shuifeiliang));
+			json.put("cwf", new DecimalFormat("#.##").format(cwf));
+			//
+//		json.put("wyf", wyf);
+//		json.put("gnf", gnf);
+//		json.put("otherfy", otherfy);
+//		json.put("dianfei", dianfei);
+//		json.put("dianliang", dianliang);
+//		json.put("ruanqifei", ruanqifei);
+//		json.put("ruanqifeiliang", ruanqifeiliang);
+//		json.put("shuifei", shuifei);
+//		json.put("shuifeiliang", shuifeiliang);
+//		json.put("cwf", cwf);
+			//
+			if(null!=room)
 			{
-				json.put("ywyname", "公众号缴费");
+				json.put("roomid", room.getId());
+				json.put("roomname", room.getName());
+				json.put("menpaihao", room.getMenpaihao());
+				json.put("mendong", room.getMendong());
+				json.put("danyuan", room.getDanyuan());
+				json.put("shenname", room.getXiaoqu().getShen().getName());
+				json.put("shiname", room.getXiaoqu().getShi().getName());
+				json.put("quname", room.getXiaoqu().getQu().getName());
+				json.put("xiaoquname", room.getXiaoqu().getXiaoquName());
 			}
+			if(null!=ywy)
+			{
+				json.put("ywyid", ywy.getId());
+				json.put("ywyname", ywy.getUserName());
+			}
+			else
+			{
+				if("0".equals(jiaofeistatus))
+				{
+					json.put("ywyname", "公众号缴费");
+				}
+			}
+		} catch (Exception e) {
+			log.error("buildJson error:",e);
 		}
 		return json;
+	}
+	
+	public static void main(String[] args) {
+		Double wyf = 0.0;
+		System.out.println("0:"+new DecimalFormat("0.00").format(wyf));
+		System.out.println("#"+new DecimalFormat("#.##").format(wyf));
+		System.out.println("str"+new DecimalFormat("#.##").format(wyf+""));
 	}
 
 	public int getZhxqyear()
